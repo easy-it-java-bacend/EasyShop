@@ -1,0 +1,32 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GETAWAY
+  cloud:
+    gateway:
+      routes:
+        - id: CUSTOMER-SERVICE
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/v1/customer/**
+        - id: ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/v1/order/**
+        - id: PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/v1/product/**
+        - id: CATEGORY-SERVICE
+          uri: lb://CATEGORY-SERVICE
+          predicates:
+            - Path=/api/v1/category/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="product" />
+        <module name="server-registry" />
+        <module name="getaway-client" />
+        <module name="category" />
+        <module name="swagger" />
+        <module name="customer" />
+        <module name="order" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="swagger" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="category" options="-parameters" />
+      <module name="customer" options="-parameters" />
+      <module name="getaway-client" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="product" options="-parameters" />
+      <module name="server-registry" options="-parameters" />
+      <module name="swagger" options="-parameters" />
+    </option>
+  </component>
+</project>
